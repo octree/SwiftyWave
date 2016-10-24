@@ -23,5 +23,5 @@ waveView.start()
 
 ##License
 
-TDFHTTPDNS is released under the WTFPL license. (Do What the Fuck You Want to Public License)
+SwiftyWave is released under the WTFPL license. (Do What the Fuck You Want to Public License)
 
