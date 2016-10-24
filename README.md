@@ -2,6 +2,21 @@
 
 ![Capture.GIF](./images/capture.gif)
 
+## Installation
+
+### CocoaPods
+
+```
+pod 'SwiftyWave', '~> 0.0.2'
+
+```
+
+### Carthage
+
+```
+github "Octree/SwiftyWave" ~> 0.0.1
+```
+
 ## Usage
 
 ```swift
