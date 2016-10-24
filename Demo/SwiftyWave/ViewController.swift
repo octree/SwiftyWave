@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var waveView: SwiftyWaveView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func start(_ sender: AnyObject) {
+        
+        waveView.start()
     }
-
+   
+    @IBAction func stop(_ sender: AnyObject) {
+        
+        waveView.stop()
+    }
 
 }
 

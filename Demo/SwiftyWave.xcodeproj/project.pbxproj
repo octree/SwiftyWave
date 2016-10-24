@@ -12,6 +12,7 @@
 		C26A860F1DBDCB2500AB443D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26A860D1DBDCB2500AB443D /* Main.storyboard */; };
 		C26A86111DBDCB2500AB443D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C26A86101DBDCB2500AB443D /* Assets.xcassets */; };
 		C26A86141DBDCB2500AB443D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26A86121DBDCB2500AB443D /* LaunchScreen.storyboard */; };
+		C26A86211DBDF26E00AB443D /* SwiftyWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A86201DBDF26E00AB443D /* SwiftyWaveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C26A86101DBDCB2500AB443D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C26A86131DBDCB2500AB443D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C26A86151DBDCB2500AB443D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C26A86201DBDF26E00AB443D /* SwiftyWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyWaveView.swift; path = ../../Classes/SwiftyWaveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		C26A86081DBDCB2500AB443D /* SwiftyWave */ = {
 			isa = PBXGroup;
 			children = (
+				C26A861B1DBDCB4300AB443D /* Classes */,
 				C26A86091DBDCB2500AB443D /* AppDelegate.swift */,
 				C26A860B1DBDCB2500AB443D /* ViewController.swift */,
 				C26A860D1DBDCB2500AB443D /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				C26A86151DBDCB2500AB443D /* Info.plist */,
 			);
 			path = SwiftyWave;
+			sourceTree = "<group>";
+		};
+		C26A861B1DBDCB4300AB443D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C26A86201DBDF26E00AB443D /* SwiftyWaveView.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26A86211DBDF26E00AB443D /* SwiftyWaveView.swift in Sources */,
 				C26A860C1DBDCB2500AB443D /* ViewController.swift in Sources */,
 				C26A860A1DBDCB2500AB443D /* AppDelegate.swift in Sources */,
 			);
@@ -300,6 +312,7 @@
 				C26A861A1DBDCB2500AB443D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
