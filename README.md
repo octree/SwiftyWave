@@ -14,7 +14,7 @@ pod 'SwiftyWave', '~> 0.0.2'
 ### Carthage
 
 ```
-github "Octree/SwiftyWave" ~> 0.0.1
+github "Octree/SwiftyWave" ~> 0.0.2
 ```
 
 ## Usage
