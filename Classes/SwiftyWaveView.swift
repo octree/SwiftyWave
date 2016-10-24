@@ -36,13 +36,18 @@ fileprivate struct Wave {
     }
 }
 
+@IBDesignable
 public class SwiftyWaveView: UIView {
     
     fileprivate var phase: CGFloat = 0.0
     fileprivate var displayLink: CADisplayLink?
+    @IBInspectable
     public var speed: CGFloat = 0.1
+    @IBInspectable
     public var amplitude: CGFloat = 0.5
+    @IBInspectable
     public var frequency: Int = 6
+    @IBInspectable
     public var color: UIColor = .white
 
     fileprivate let waves = [Wave(att: 1, lineWidth: 1.5, opacity: 1.0),
