@@ -87,7 +87,7 @@ open class SwiftyWaveView: UIView {
         
         stop()
         displayLink = CADisplayLink(target: self, selector: #selector(SwiftyWaveView.drawWaves))
-        displayLink!.preferredFramesPerSecond = 60
+        displayLink!.frameInterval = 1
         displayLink!.add(to: RunLoop.main, forMode: .commonModes)
     }
     
