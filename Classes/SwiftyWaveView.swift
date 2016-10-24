@@ -37,7 +37,7 @@ fileprivate struct Wave {
 }
 
 @IBDesignable
-public class SwiftyWaveView: UIView {
+open class SwiftyWaveView: UIView {
     
     fileprivate var phase: CGFloat = 0.0
     fileprivate var displayLink: CADisplayLink?
@@ -76,7 +76,7 @@ public class SwiftyWaveView: UIView {
         shapeLayers.forEach(layer.addSublayer)
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         drawLayers()
     }
