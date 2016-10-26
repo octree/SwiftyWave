@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C26A86261DBDFCB500AB443D"
-               BuildableName = "Shared.framework"
+               BuildableName = "SwiftyWave.framework"
                BlueprintName = "Shared"
                ReferencedContainer = "container:SwiftyWave.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C26A86261DBDFCB500AB443D"
-            BuildableName = "Shared.framework"
+            BuildableName = "SwiftyWave.framework"
             BlueprintName = "Shared"
             ReferencedContainer = "container:SwiftyWave.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C26A86261DBDFCB500AB443D"
-            BuildableName = "Shared.framework"
+            BuildableName = "SwiftyWave.framework"
             BlueprintName = "Shared"
             ReferencedContainer = "container:SwiftyWave.xcodeproj">
          </BuildableReference>
