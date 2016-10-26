@@ -41,6 +41,10 @@ open class SwiftyWaveView: UIView {
     
     fileprivate var phase: CGFloat = 0.0
     fileprivate var displayLink: CADisplayLink?
+    fileprivate var animatingStart = false
+    fileprivate var animatingStop = false
+    fileprivate var currentAmplitude: CGFloat = 0.0
+    
     @IBInspectable
     public var speed: CGFloat = 0.1
     @IBInspectable
@@ -49,6 +53,8 @@ open class SwiftyWaveView: UIView {
     public var frequency: Int = 6
     @IBInspectable
     public var color: UIColor = .white
+    public private(set) var animating = false
+    
 
     fileprivate let waves = [Wave(att: 1, lineWidth: 1.5, opacity: 1.0),
                              Wave(att: 2, lineWidth: 1.0, opacity: 0.6),
@@ -85,27 +91,61 @@ open class SwiftyWaveView: UIView {
     
     public func start() {
         
-        stop()
+        if (animating) {
+        
+            return
+        }
+        
+        invalidate()
+        animating = true
+        animatingStop = false
+        animatingStart = true
         displayLink = CADisplayLink(target: self, selector: #selector(SwiftyWaveView.drawWaves))
         displayLink!.frameInterval = 1
         displayLink!.add(to: RunLoop.main, forMode: .commonModes)
     }
     
    public func stop() {
-        
+    
+        animating = false
+        animatingStart = false
+        animatingStop = true
+   }
+    
+    
+    // MARK: Private Methods
+    
+    private func invalidate() {
+    
         displayLink?.isPaused = true
         displayLink?.remove(from: RunLoop.main, forMode: .commonModes)
         displayLink = nil
     }
-    
-    
-    // MARK: Private Methods
     
     //
     @objc private func drawWaves() {
         
         phase = (phase + CGFloat(M_PI) * speed)
             .truncatingRemainder(dividingBy: CGFloat(2 * M_PI))
+        
+        if (animatingStart) {
+        
+            currentAmplitude = currentAmplitude + 0.02
+            if (currentAmplitude >= amplitude) {
+            
+                currentAmplitude = amplitude
+                animatingStart = false
+            }
+        } else if (animatingStop) {
+        
+            currentAmplitude = currentAmplitude - 0.02
+            if (currentAmplitude <= 0.001) {
+            
+                currentAmplitude = 0
+                animatingStop = false
+                invalidate()
+            }
+        }
         
         let count = waves.count
         
@@ -149,7 +189,7 @@ open class SwiftyWaveView: UIView {
         for i in 0...Int(width) {
             
             let x = (CGFloat(i) - centerX) / scale
-            let y = f(x) * scale * amplitude + centerY
+            let y = f(x) * scale * currentAmplitude + centerY
             path.addLine(to: CGPoint(x: CGFloat(i), y: y))
         }
         
