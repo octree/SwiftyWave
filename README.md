@@ -2,19 +2,25 @@
 
 ![Capture.GIF](./images/capture.gif)
 
+## Requirements
+
+* iOS 8.0+
+* Xcode 9.0+
+* Swift 4.0+
+
 ## Installation
 
 ### CocoaPods
 
 ```
-pod 'SwiftyWave', '~> 0.0.2'
+pod 'SwiftyWave', '~> 0.0.3'
 
 ```
 
 ### Carthage
 
 ```
-github "Octree/SwiftyWave" ~> 0.0.2
+github "Octree/SwiftyWave" ~> 0.0.3
 ```
 
 ## Usage
