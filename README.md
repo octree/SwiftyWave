@@ -13,14 +13,14 @@
 ### CocoaPods
 
 ```
-pod 'SwiftyWave', '~> 0.0.3'
+pod 'SwiftyWave', '~> 0.1.0'
 
 ```
 
 ### Carthage
 
 ```
-github "Octree/SwiftyWave" ~> 0.0.3
+github "Octree/SwiftyWave" ~> 0.1.0
 ```
 
 ## Usage
