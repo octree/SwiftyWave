@@ -125,8 +125,8 @@ open class SwiftyWaveView: UIView {
     //
     @objc private func drawWaves() {
         
-        phase = (phase + CGFloat(M_PI) * speed)
-            .truncatingRemainder(dividingBy: CGFloat(2 * M_PI))
+        phase = (phase + CGFloat.pi * speed)
+            .truncatingRemainder(dividingBy: 2 * CGFloat.pi)
         
         if (animatingStart) {
         
