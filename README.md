@@ -42,7 +42,7 @@ waveView.start()
 ### Storyboard
 
 
-##License
+## License
 
 SwiftyWave is released under the WTFPL license. (Do What the Fuck You Want to Public License)
 
