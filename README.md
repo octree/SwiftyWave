@@ -5,22 +5,22 @@
 ## Requirements
 
 * iOS 8.0+
-* Xcode 9.0+
-* Swift 4.0+
+* Xcode 10.0+
+* Swift 4.2+
 
 ## Installation
 
 ### CocoaPods
 
 ```
-pod 'SwiftyWave', '~> 0.1.0'
+pod 'SwiftyWave', '~> 1.0.0'
 
 ```
 
 ### Carthage
 
 ```
-github "Octree/SwiftyWave" ~> 0.1.0
+github "Octree/SwiftyWave" ~> 1.0.0
 ```
 
 ## Usage
