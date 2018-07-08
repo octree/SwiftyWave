@@ -1,4 +1,4 @@
 framework module SwiftyWave {
-    header "SwiftyWave-Swift.h"
-    requires objc
+  header "SwiftyWave-Swift.h"
+  requires objc
 }

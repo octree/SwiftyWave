@@ -102,7 +102,7 @@ open class SwiftyWaveView: UIView {
         animatingStart = true
         displayLink = CADisplayLink(target: self, selector: #selector(SwiftyWaveView.drawWaves))
         displayLink!.frameInterval = 1
-        displayLink!.add(to: RunLoop.main, forMode: .commonModes)
+        displayLink!.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
     }
     
    public func stop() {
@@ -118,7 +118,7 @@ open class SwiftyWaveView: UIView {
     private func invalidate() {
     
         displayLink?.isPaused = true
-        displayLink?.remove(from: RunLoop.main, forMode: .commonModes)
+        displayLink?.remove(from: RunLoop.main, forMode: RunLoop.Mode.common)
         displayLink = nil
     }
     
